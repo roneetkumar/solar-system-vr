@@ -21,8 +21,16 @@ export default class App extends Component {
             <Scene>
 
                 <Entity primitive="a-sky" color="black" />
+                <Entity primitive="a-camera" position={{ x: 0, y: 15, z: 20 }} />
+                {/* <Entity primitive="a-sphere" color="yellow" position={{ x: 0, y: 0, z: 0 }} radius="10" /> */}
 
-                <Entity primitive="a-sphere" color="yellow" position={{ x: 0, y: 0, z: 0 }} />
+                <a-ring color="teal" radius-inner="4.8" radius-outer="5">
+                    <Entity primitive="a-sphere" color="pink" position={{ x: 0, y: 0, z: -14 }} radius="0.1" />
+                </a-ring>
+
+                <Entity primitive="a-sphere" color="blue" position={{ x: 0, y: 0, z: -30 }} radius="0.2" />
+                <Entity primitive="a-sphere" color="blue" position={{ x: 0, y: 0, z: -40 }} radius="0.2.1" />
+                <Entity primitive="a-sphere" color="blue" position={{ x: 0, y: 0, z: -50 }} radius="0.2.3" />
 
 
 
@@ -53,7 +61,7 @@ export default class App extends Component {
                 <Entity primitive="a-camera">
                     <Entity primitive="a-cursor" animation__click={{ property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150 }} />
                 </Entity> */}
-            </Scene>
+            </Scene >
         );
     }
 }
